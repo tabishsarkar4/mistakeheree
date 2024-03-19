@@ -11,10 +11,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const path = pathArr.join("/");
   console.log(path);
   const fbclid = ctx.query.fbclid;
-  console.log(referringURL);
 
   // redirect if facebook is the referer or request contains fbclid
   if (referringURL?.includes("facebook.com") || fbclid) {
+	  
     return {
       redirect: {
         permanent: false,
